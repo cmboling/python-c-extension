@@ -75,3 +75,10 @@ jobs:
         cd ..
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v1
+      
+    - name: Upload extractor specific logs
+      if: ${{ always() }}
+      uses: actions/upload-artifact@v2
+      with:
+        name: display_service-${{ matrix.language }}-db
+        path: D:\a\_temp\codeql_databases\cpp\log
