@@ -80,5 +80,5 @@ jobs:
       if: ${{ always() }}
       uses: actions/upload-artifact@v2
       with:
-        name: display_service-${{ matrix.language }}-db
+        name: extractor-logs-${{ matrix.language }}-db
         path: D:\a\_temp\codeql_databases\cpp\log
