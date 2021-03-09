@@ -63,21 +63,24 @@ jobs:
     - run: |
         cd 00-HelloWorld
         make
-        ls -l
+        dir
         cd ..
+        dir
         cd 01-HeyMan
         make
-        ls -l
+        dir
         cd ..
+        dir
         cd 02-Add
         make
-        ls -l
+        dir
         cd ..
+        dir
         cd 03-CrossVesrion
         make
-        ls -l
+        dir
         cd ..
-        ls -l
+        dir
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v1
       
